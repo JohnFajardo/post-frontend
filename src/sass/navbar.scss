@@ -3,6 +3,12 @@
     margin-right: 16px;
 }
 
+.navbar {
+    box-shadow: 0 0.25em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);
+}
+
+
+
 .navbar-item.navbar-center {
     flex-grow: 1;
     flex-direction: column;

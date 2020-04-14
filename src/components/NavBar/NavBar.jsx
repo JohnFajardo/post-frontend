@@ -13,6 +13,10 @@ class NavBar extends React.Component {
         return !this.props.user ? this.props.history.location.state.user : this.props.user;
     }
 
+    handleNewPost = () => {
+        this.props.history.push('/post/new', { user: this.user() })
+    }
+
     render() {
 
         return (
@@ -33,7 +37,7 @@ class NavBar extends React.Component {
                     <div className="navbar-end">
                         <div className="navbar-item">
                             <div className="buttons">
-                                <button className="button is-primary has-text-weight-bold">New Post</button>
+                                <button className="button is-primary has-text-weight-bold" onClick={this.handleNewPost}>New Post</button>
                                 <button className="button is-primary has-text-weight-bold" onClick={this.handleLogout}>Log out</button>
                             </div>
                         </div>
