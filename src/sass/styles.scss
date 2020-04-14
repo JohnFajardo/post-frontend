@@ -1,0 +1,15 @@
+#root {
+    min-height: 100vh;
+}
+
+body {
+    background-color: #F7F7F7;
+}
+
+
+@import './login.scss';
+@import './loginError.scss';
+@import './navbar.scss';
+@import './home.scss';
+@import './comments.scss';
+@import '~bulma/bulma.sass';
