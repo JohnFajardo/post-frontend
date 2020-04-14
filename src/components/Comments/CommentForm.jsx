@@ -20,6 +20,11 @@ class CommentForm extends Component {
         this.setState({ body: '' });
     }
 
+    handleCancel = (event) => {
+        event.preventDefault();
+        this.setState({ body: '' });
+    }
+
     render() {
         return (
             <div className="commentFormContainer">
@@ -31,7 +36,11 @@ class CommentForm extends Component {
                         </div>
                         <div className="field">
                             <div className="control is-pulled-right">
-                                <button className="button is-link commentButton">Submit</button>
+
+                                <div className="control is-pulled-right buttons">
+                                    <button className="button is-danger is-light cancel commentButton" onClick={this.handleCancel}>Cancel</button>
+                                    <button className="button is-primary commentButton">Submit</button>
+                                </div>
                             </div>
                         </div>
                     </div>

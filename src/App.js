@@ -17,8 +17,8 @@ function App() {
         <Route path='/post/:id' component={Post} />
         <Route path='/signup' component={SignUp} />
         <Route path='/home' component={Home} />
-        <Route path='/404' component={NotFound} />
-        <Route path='/' component={Login} />
+        <Route exact path='/' component={Login} />
+        <Route component={NotFound} />
       </Switch>
     </div>
   );

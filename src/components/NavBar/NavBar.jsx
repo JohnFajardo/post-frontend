@@ -17,6 +17,10 @@ class NavBar extends React.Component {
         this.props.history.push('/post/new', { user: this.user() })
     }
 
+    homeLink = () => {
+        return this.props.history.location.pathname == '/home' ? null : <p className="home"><Link className="has-text-primary" to="/home">Back to home</Link></p>;
+    }
+
     render() {
 
         return (
@@ -32,7 +36,7 @@ class NavBar extends React.Component {
                         </p>
                     </div>
                     <div className="navbar-center">
-                        <p className="home"><Link className="has-text-primary" to="/home">Back to home</Link></p>
+                        {this.homeLink()}
                     </div>
                     <div className="navbar-end">
                         <div className="navbar-item">
