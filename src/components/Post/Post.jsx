@@ -40,7 +40,6 @@ class Post extends Component {
             body: JSON.stringify({ postId: `${this.props.match.params.id}`, userId: `${this.props.history.location.state.user.id}`, body: body })
         }).then(response => response.json());
         this.setState({ comments: [...this.state.comments, { 'username': user, 'body': body }] })
-
     }
 
     render() {
